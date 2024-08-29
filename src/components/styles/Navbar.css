@@ -1,0 +1,194 @@
+#NavbarContainer {
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    padding: 0 2%;
+    background-color: black;
+}
+
+#NavbarLogo {
+    width: 5%;
+    margin-left: -1%;
+}
+
+#NavbarLinksDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 34%;
+    margin-right: 20%;
+}
+
+.NavbarLinks {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    transition: 0.3s;
+    color: #f7f3f5;
+}
+
+.NavbarLinks:hover {
+    text-shadow: 0px 0px 30px white;
+    font-size: 1.6rem;
+}
+
+#NavbarLogoName{
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 3%;
+    color: #f7f3f5; 
+}
+
+#NavbarLogoName:hover{
+    text-shadow: 0px 0px 30px white;
+}
+
+#LoginSignUpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+    margin-left: 20%;
+}
+
+#LoginLink {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    margin: 0 5%;
+    padding: 1%;
+    padding-bottom: 1.5%;
+    padding-left: 3%;
+    padding-right: 2%;
+    transition: 0.3s;
+    color: #f7f3f5;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#LoginLink:hover {
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px rgba(119, 203, 185, 0.5);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#SignUpLink {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #2c302e;
+    padding: 1% 3%;
+    background-color: #77CBB9;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #77CBB9;
+}
+
+#SignUpLink:hover {
+    cursor: pointer;
+    background-color: #171717;
+    border: 1px solid #2c302e;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+#NavbarSearchBox {
+    font-size: 1.5rem;
+    padding: 0.5%;
+    padding-left: 3%;
+    border-radius: 25px;
+}
+
+#NavbarSearchBox::placeholder {
+    color: #2d2d34;
+}
+
+#NavbarSearchIcon {
+    width: 2rem;
+    border: 1px solid black;
+    padding: 1%;
+    margin-left: 1%;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+#NavbarSearchIcon:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 1024px) {
+    #NavbarContainer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #NavbarLogo {
+        width: 10%;
+    }
+
+    #NavbarLinksDiv {
+        width: 60%;
+        margin-right: 5%;
+    }
+
+    #LoginSignUpContainer {
+        width: 30%;
+        margin-left: 65%;
+        margin-bottom: 3%;
+    }
+
+    .NavbarLinks {
+        font-size: 1.25rem;
+    }
+
+    #LoginLink, #SignUpLink {
+        font-size: 1.25rem;
+    }
+
+    #SearchContainer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #NavbarContainer {
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    #NavbarLogo {
+        width: 15%;
+        margin: 0 auto;
+    }
+
+    #NavbarLinksDiv {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        row-gap: 15px;
+        padding: 1% 0;
+    }
+
+    #LoginSignUpContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .NavbarLinks, #LoginLink, #SignUpLink {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #NavbarLogo {
+        width: 20%;
+    }
+
+    .NavbarLinks, #LoginLink, #SignUpLink {
+        font-size: 1rem;
+    }
+
+    #NavbarSearchBox {
+        font-size: 1.25rem;
+    }
+}

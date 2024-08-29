@@ -1,0 +1,145 @@
+#FooterCase{
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+}
+
+#Footer{
+    height: 26vh;
+    background-color: black;
+    border-top: solid 2px white;
+    position: relative; 
+}
+
+#FooterCustomerCare{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    font-size: 150%;
+    color: #f7f3f5;
+    text-decoration: underline;
+}
+
+.FooterCCLinks{
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    font-size: 120%;
+    text-decoration: none;
+    color: #f7f3f5;
+}
+
+.FooterCCLinks:hover{
+    text-decoration: underline;
+}
+
+#FooterAboutUs{
+    position: absolute;
+    top: 8%;
+    left: 25%;
+    font-size: 150%;
+    color: #f7f3f5;
+    text-decoration: underline;
+}
+
+.FooterAULinks{
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    font-size: 120%;
+    text-decoration: none;
+    color: #f7f3f5;
+}
+
+.FooterAULinks:hover{
+    text-decoration: underline;
+}
+
+#FooterInfo{
+    position: absolute;
+    top: 8%;
+    left: 36%;
+    font-size: 150%;
+    color: #f7f3f5;
+    text-decoration: underline;
+}
+
+.FooterInfoLinks{
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    font-size: 120%;
+    text-decoration: none;
+    color: #f7f3f5;
+}
+
+.FooterInfoLinks:hover{
+    text-decoration: underline;
+}
+
+.FooterBelleza{
+    font-size: 120%;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: #f7f3f5;
+}
+
+#FooterKeepUpToDate{
+    position: absolute;
+    top: 10%;
+    left: 57.5%;
+    font-size: 150%;
+    color: #f7f3f5;
+}
+
+#FooterInput{
+    position: absolute;
+    font-size: 120%;
+    padding: 0.27%;
+    top: 37.5%;
+    left: 57.5%;
+    width: 14.25%;
+}
+
+#FooterSubscribe{
+    position: absolute;
+    top: 37.5%;
+    left: 72.5%;
+    background-color: #f7f3f5;
+    color: black;
+    font-size: 120%;
+    padding: 0.25%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    border: 2px solid white;
+    transition: 0.4s;
+}
+
+#FooterSubscribe:hover{
+    cursor: pointer;
+    background-color: #171717;
+    color: white;
+}
+
+#FooterKeepInTouch{
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    font-size: 150%;
+    color: #f7f3f5;
+    text-decoration: underline;
+}
+
+#FooterSocialIcons{
+    position: absolute;
+    top: 37.5%;
+    left: 79.75%;
+    display: flex;
+    margin-right: 7.5%;
+    color: #f7f3f5;
+}
+
+.FooterSocials{
+    width: 50%;
+}
