@@ -1,0 +1,96 @@
+body{
+    overflow-x: hidden;
+}
+
+#MoisturizerContainer{
+    display: flex;
+    position: relative;
+}
+
+#MainPlateProducts{
+    background-color: #77CBB9;
+    width: 99%;
+    margin-left: 0.5%;
+    border-radius: 20px;
+    margin-top: 0.5%;
+    margin-bottom: 15%;
+    position: relative;
+    height: 100vh;
+}
+
+#TotalProductsCount{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 3%;
+    font-size: 200%;
+    font-weight: 400;
+}
+
+#CategoryDropdown{
+    display: flex;
+    width: 30%;
+    position: absolute;
+    left: 56%;
+    top: 0%;
+}
+
+#CategoryDropdown1{
+    display: flex;
+    width: 30%;
+    position: absolute;
+    left: 77.5%;
+    top: 3%;
+}
+
+#CategoryLabel{
+    font-size: 150%; 
+    margin: 0%;   
+}
+
+#CategorySelect:hover{
+    cursor: pointer;
+}
+
+#SortByDropdown{
+    display: flex;
+    width: 30%;
+    position: absolute;
+    left: 78%;
+    top: 1%;
+}
+
+#SortByDropdown1{
+    display: flex;
+    width: 30%;
+    position: absolute;
+    left: 78%;
+    top: 0.4%;
+}
+
+#SortByLabel{
+    font-size: 150%; 
+    margin: 0%;   
+}
+
+#SortBySelect{
+    width: 50%;
+    font-size: 120%;
+    border-radius: 10px;
+    margin-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+
+#SortBySelect:hover{
+    cursor: pointer;
+}
+
+#ProductsList{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 0%;
+    background-color: #77CBB9;
+    border-radius: 1%;
+    padding-bottom: 2%;
+}

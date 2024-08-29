@@ -1,0 +1,48 @@
+.hover-card {
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+    width: 18rem; /* Ensure the width is fixed */
+    border-radius:40px;
+    transition: 0.4s;
+  }
+  
+.hover-card:hover {
+  background-color: #f8f9fa;
+  border-color: #77CBB9;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px rgba(119,203,185,1);
+}
+  
+  .hover-card .card-title,
+  .hover-card .card-text {
+    transition: color 0.3s ease; /* Smooth color transition */
+    color: #000;
+    padding: 4%;
+    border-color: #77CBB9;
+  }
+  
+  .hover-card:hover .card-title,
+  .hover-card:hover .card-text {
+    color: black;
+    border-radius:40px;
+  }
+  .hover-card {
+    height: 28vh;
+}
+.hover-body:hover{
+    background-color: #000;
+    border-color:#77CBB9;
+    border:2px solid #77CBB9;
+}
+.card-body:hover {
+    border-radius: 40px;
+}
+p.card-text {
+    padding: 10px;
+}
+.card-title.h5 {
+    padding: 10px;
+    font-size: 20px !important;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    margin-top: 5%;
+}

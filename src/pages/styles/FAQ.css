@@ -1,0 +1,33 @@
+.questioncontainer{
+    background-color:#000;
+    color:#fff;
+    height:180vh!important;
+}
+.faqh3{
+    font-family:'Merriweather';
+    text-align:center;
+    text-decoration: underline;
+    font-weight:900;
+    font-size:62px !important;
+}
+.card_grid {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+.card_grid2 {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+.card_grid3 {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}

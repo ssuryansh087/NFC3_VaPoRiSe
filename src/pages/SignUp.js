@@ -7,11 +7,12 @@ import Navbar from "../components/Navbar.js";
 import Footer from "../components/Footer.js";
 import firebase from '../database/firebaseConfig.js';
 import 'firebase/compat/firestore';
+import { useDispatch } from "react-redux";
+import { setUserID, setUserType } from "../redux/userSlice.js";
 
 function SignUp(){
     let [buttonText, setButtonText] = useState('Show');
     const [password, setPassword] = useState("");
-    const [userType, setUserType] = useState(1);
     const [place, setPlace] = useState("Name");
     const [showPassword, setShowPassword] = useState(false);
     const [selected, setSelected] = useState(1);
@@ -24,6 +25,8 @@ function SignUp(){
     const [p1, setP1] = useState("-Discover Volunteer Opportunities Tailored to You");
     const [p2, setP2] = useState("-Make Donations That Truly Make a Difference");
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [userType2, setUserType2] = useState(1);
 
     const HandleClick = () =>{
         setButtonText(showPassword === true ? 'Show' : 'Hide');
@@ -51,7 +54,7 @@ function SignUp(){
                 setP2("-Make Donations That Truly Make a Difference");
                 setPlace("Name");
             }
-            setUserType(1);
+            setUserType2(1);
         }
         else if(val === 2){
             if(selected !== 2){
@@ -70,7 +73,7 @@ function SignUp(){
                 setP2("-Connect with Volunteers and Donors");
                 setPlace("Organization Name");
             }
-            setUserType(2);
+            setUserType2(2);
         }
     }
 
@@ -86,7 +89,7 @@ function SignUp(){
             const fundraisers = [];
             const orgName = name;
             
-            if(userType === 1){
+            if(userType2 === 1){
                 await firebase.firestore().collection('users').doc(uid).set({
                     name,
                     email
@@ -100,7 +103,8 @@ function SignUp(){
                     fundraisers
                 });
             }
-            
+            dispatch(setUserID(uid));
+            dispatch(setUserType(userType2));
         } catch (error) {
           console.log(error.message);
         }
@@ -113,7 +117,7 @@ function SignUp(){
             <div className='leftContainer2' ref={divRef}>
             <img src={logo} id='Logo2' alt='Logo'/>
             <h1 id='newHere2'>Already a Member?</h1>
-            <p id='SignUpText2'>Sign In to Work Hive!</p>
+            <p id='SignUpText2'>Sign In to HumaNGO!</p>
             <p className='offers2'>{p1}</p>
             <p className='offers2'>{p2}</p>
             <p className='offers2'>& Much More!</p>

@@ -2,3 +2,101 @@ body {
     font-family: Merriweather;
     background-color: black;
 }
+
+#Carousel1{
+    position: relative;
+}
+
+#Carousel1Text{
+    font-size: 300%;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 40%;
+}
+
+#Carousel1Btn{
+    width: 20%;
+    position: absolute;
+    border: none;
+    font-size: 250%;
+    padding: 1%;
+    top: 60%;
+    left: 65%;
+    border-radius: 20px;
+    color: white;
+    background-color: #171717;
+    transition: 0.4s;
+}
+
+#Carousel1Btn:hover{
+    cursor: pointer;
+    color: #77cbb9;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 3);
+}
+
+.floaters {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    /* margin-top: 5%; */
+}
+.Landing_division1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.Landing_division2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+}
+.imgleft {
+    width: 80%;
+    /* margin-left: 10%; */
+    border-radius: 30px;
+}
+
+.para_justify{
+    color:white;
+}
+
+.para_justify {
+    font-size: 20px;
+    padding: 5%;
+    text-align: center;
+}
+.Landing_button {
+    width: 50%;
+    padding: 2%;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family:'Merriweather';
+    font-weight:700;
+}
+.Landing_button:hover{
+    background-color: aquamarine;
+    box-shadow: 0px 0px 10px 10px; 
+    cursor:pointer;
+    animation: pulse 2s;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0px 0px 10px rgba(255,255,255, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px rgba(255,255,255, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0px 0px 10px rgba(255,255,255, 0.5);
+    }
+}

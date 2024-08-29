@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import './styles/Login.css';
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../assets/Logo.png';
 import Footer from "../components/Footer";
+import firebase from '../database/firebaseConfig';
+import { useDispatch } from "react-redux";
+import { setUserID, setUserType } from "../redux/userSlice";
 
 function Login(){
     let [buttonText, setButtonText] = useState('Show');
@@ -19,6 +22,9 @@ function Login(){
     const [p2, setP2] = useState("-Explore Volunteer Opportunities");
     const [p3, setP3] = useState("-Easily Make Donations and Track Contributions");
     const [p4, setP4] = useState("-Stay Connected with the Latest Updates");
+    const [userType2, setUserType2] = useState(1);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const HandleClick = () =>{
         setButtonText(showPassword === true ? 'Show' : 'Hide');
@@ -47,7 +53,7 @@ function Login(){
                 setP3("-Easily Make Donations and Track Contributions");
                 setP4("-Stay Connected with the Latest Updates");
             }
-            
+            setUserType2(1);
         }
         else if(val === 2){
             if(selected !== 2){
@@ -67,9 +73,26 @@ function Login(){
                 setP3("-Connect with Volunteers and Donors");
                 setP4("-Stay Informed with Real-Time Updates and Analytics");
             }
-            
+            setUserType2(2);
         }
     }
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+          const uid = userCredential.user.uid;
+          dispatch(setUserID(uid));
+          dispatch(setUserType(userType2));
+          console.log('User logged in:', userCredential.user);
+          alert("User Logged in Successfully!");
+          navigate('/');
+          console.log(uid);
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
 
     return(
         <div id="SignInDiv">
@@ -85,7 +108,7 @@ function Login(){
 
                         <h1 id='loginText'>Login to Your Account</h1>
         
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div id='usernameID'>
                             <input ref={input1Ref} type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} name='username' required
                             id='usernameInput'/>

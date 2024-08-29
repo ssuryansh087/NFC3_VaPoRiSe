@@ -28,7 +28,7 @@
 
 .NavbarLinks:hover {
     text-shadow: 0px 0px 30px white;
-    font-size: 1.6rem;
+    transform: scale(1.05);
 }
 
 #NavbarLogoName{
@@ -85,7 +85,27 @@
 
 #SignUpLink:hover {
     cursor: pointer;
-    background-color: #171717;
+    background-color: white;
+    border: 1px solid #2c302e;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+#NavbarMyWhat {
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    color: #2c302e;
+    padding: 1% 5%;
+    background-color: #77CBB9;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid #77CBB9;
+    width: 100%;
+}
+
+#NavbarMyWhat:hover {
+    cursor: pointer;
+    background-color: #77CBB9;
     border: 1px solid #2c302e;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 }
@@ -113,6 +133,47 @@
 #NavbarSearchIcon:hover {
     cursor: pointer;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#NewDropdown{
+    margin-top: 0%;
+    margin-left: 1%;
+    position: relative;
+    display: inline-block;
+}
+
+#AccountDropdownContent{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: black;
+    width: 125%;
+    margin-top: 0%;
+    box-shadow: 0px 5px 20px 0px rgba(255,255,255,0.25);
+    z-index: 1;
+    left: -7%;
+    top: 100%;
+}
+
+#AccountDropdownContent a{
+    color: white;
+    padding: 12px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 90%;
+    transition: 0.3s;
+    text-align: center;
+}
+
+#AccountDropdownContent a:hover{
+    cursor: pointer;
+    color: #77CBB9;
+    opacity: 1;
+}
+
+#NewDropdown:hover #AccountDropdownContent{
+    display: block;
 }
 
 @media only screen and (max-width: 1024px) {
