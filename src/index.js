@@ -17,6 +17,7 @@ import NewFundraiser from './pages/NewFundraiser';
 import Events from './pages/Events';
 import Event from './pages/Event';
 import FAQ from './pages/FAQ';
+import Fundraisers from './pages/Fundraisers';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: '/faq',
     element: <FAQ />
+  },
+  {
+    path: '/fundraisers',
+    element: <Fundraisers />
   }
 ])
 

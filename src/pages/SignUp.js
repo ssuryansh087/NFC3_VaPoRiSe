@@ -9,6 +9,8 @@ import firebase from '../database/firebaseConfig.js';
 import 'firebase/compat/firestore';
 import { useDispatch } from "react-redux";
 import { setUserID, setUserType } from "../redux/userSlice.js";
+import NGO from '../assets/LoginSignup/NGO.png';
+import USER from '../assets/LoginSignup/USER.png';
 
 function SignUp(){
     let [buttonText, setButtonText] = useState('Show');
@@ -53,6 +55,10 @@ function SignUp(){
                 setP1("-Discover Volunteer Opportunities Tailored to You");
                 setP2("-Make Donations That Truly Make a Difference");
                 setPlace("Name");
+                const img1 = document.getElementById('USERTake2');
+                const img2 = document.getElementById('NGOTake2');
+                img1.style.display = "none";
+                img2.style.display = "block";
             }
             setUserType2(1);
         }
@@ -72,6 +78,10 @@ function SignUp(){
                 setP1("-Manage Your Projects and Fundraisers Effectively");
                 setP2("-Connect with Volunteers and Donors");
                 setPlace("Organization Name");
+                const img1 = document.getElementById('USERTake2');
+                const img2 = document.getElementById('NGOTake2');
+                img1.style.display = "block";
+                img2.style.display = "none";
             }
             setUserType2(2);
         }
@@ -125,6 +135,9 @@ function SignUp(){
         </div>
 
         <div className='rightContainer2'>
+
+            <img src={NGO} id="NGOTake2" alt="NGO Take 12"/>
+            <img src={USER} id="USERTake2" alt="USER Take 2"/>
 
             <div id="LoginSwitcher2">
                 <button ref={btn1Ref} id="SwitchF" onClick={() => handleClick(1)}>User</button>

@@ -1,6 +1,6 @@
 .product{
     background-color:#D5E7F1;
-    height: 128vh;
+    height: 185vh;
     position: relative;
 }
 .cleanser_prod {
@@ -188,4 +188,9 @@ input[type="number"] {
     color:white;
     box-shadow: 0px 0px 40px rgba(0,0,0,0.5); 
 
+}
+
+#EventMap{
+    margin-top: 3%;
+    margin-left: 25%;
 }

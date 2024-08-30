@@ -108,6 +108,21 @@
     background-color: #0A0908;
     cursor: pointer;
   }
+
+  #NGOTake2{
+    position: absolute;
+    width: 20%;
+    left: 77%;
+    top: 11%;
+  }
+
+  #USERTake2{
+    position: absolute;
+    width: 20%;
+    left: 44%;
+    top: 11%;
+    display: none;
+  }
   
   #submitButton2{
     text-align: center;

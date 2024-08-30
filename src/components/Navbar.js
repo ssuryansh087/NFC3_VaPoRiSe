@@ -51,7 +51,7 @@ function Navbar(){
             <div id="NavbarLinksDiv">
             <Link to='/events' className="NavbarLinks">Events</Link>
             <a href="/" className="NavbarLinks">Projects</a>
-            <a href="/" className="NavbarLinks">Fundraisers</a>
+            <Link to='/fundraisers' className="NavbarLinks">Fundraisers</Link>
             <a href="/" className="NavbarLinks">About Us</a>
             </div>
 

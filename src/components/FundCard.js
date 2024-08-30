@@ -1,16 +1,12 @@
 import React from 'react';
-import './styles/Card.css';
-import { useSelector } from 'react-redux';
-import { doc, updateDoc, getDoc } from 'firebase/firestore';
-import { db } from '../database/storageConfig';
+import './styles/FundCard.css';
 import { useNavigate } from 'react-router-dom';
 
-function Card({event, eventName}){
-    const userID = useSelector((state) => state.user.userID);
+function FundCard({event, eventName}){
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/event/${eventName}`);
+        navigate(`/fundraisers`);
     }
     
     return(
@@ -19,11 +15,14 @@ function Card({event, eventName}){
                 <img src={event.imgURL} alt='' id='CardPrimaryImage'/>
                 <p id='CardProductPrice'>{event.name}</p>
             </div>
+            
             <div id='CardDescDiv'>
-                <button id='CardAddToCart'>Participate</button>
+                <p id='CardOrgName1'>{event.orgName}</p>
+                <p id='CardGoal'>Goal : ₹ {event.fundGoal}</p>
+                <button id='CardAddToCart'>Donate</button>
             </div>
         </div>
     )
 }
 
-export default Card;
+export default FundCard;

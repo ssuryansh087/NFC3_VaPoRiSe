@@ -88,6 +88,7 @@ function NewFundraiser(){
               });
             setLoading(false);
             alert("Fundraiser Added Successfully!");
+            window.location.reload();
         }
         catch(e){
             alert(e.message);

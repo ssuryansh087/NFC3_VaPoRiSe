@@ -2,17 +2,14 @@ import React, { useState, useEffect } from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './styles/Events.css';
-import Card from '../components/Card';
-import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
+import Card from '../components/EventCard';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../database/storageConfig';
 import { Link } from 'react-router-dom';
-import { doc, updateDoc, getDoc } from 'firebase/firestore';
-import { useSelector } from "react-redux";
     
 function Events(){
     const [events, setEvents] = useState([]);
     const [category, setCategory] = useState('all');
-    const userID = useSelector((state) => state.user.userID);
 
     useEffect(() => {
         const fetchProducts = async() => {
@@ -97,13 +94,6 @@ function Events(){
                     </div>
                 </div>
             </div>
-            <dialog id="LoginDialog">
-                <button id="DialogClose" onClick={handelDialogClose}>x</button>
-                <h1 style={{textAlign: "center", marginBottom: "0%"}}>Login or Sign Up to continue!</h1>
-                <Link to='/SignIn'><button type="button" id="DialogSignInButton">Sign In</button></Link>
-                <h1 style={{textAlign: "center", fontSize: "150%", fontWeight: "400", marginBottom: "0%"}}>New Here? Create an Account and get started!</h1>
-                <Link to="/SignUp" id="DialogSignUpLink">Sign Up</Link>
-            </dialog>
             <Footer />
         </div>
     )

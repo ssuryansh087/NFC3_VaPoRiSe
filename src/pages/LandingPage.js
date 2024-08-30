@@ -12,7 +12,7 @@ import fund from '../assets/landing/fund.png';
 
 function LandingPage() {
   return (
-    <div style={{position: "relative", height: "310vh"}}>
+    <div style={{position: "relative", height: "320vh", backgroundColor: "black"}}>
         <Navbar/>
         <Carousel width={"100%"} autoPlay={true} showArrows={false} useKeyboardArrows={true} showStatus={false} showThumbs={false}>
           <div id='Carousel1'>

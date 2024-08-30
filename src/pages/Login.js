@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import firebase from '../database/firebaseConfig';
 import { useDispatch } from "react-redux";
 import { setUserID, setUserType } from "../redux/userSlice";
+import NGO from '../assets/LoginSignup/NGO.png';
+import USER from '../assets/LoginSignup/USER.png';
 
 function Login(){
     let [buttonText, setButtonText] = useState('Show');
@@ -52,6 +54,10 @@ function Login(){
                 setP2("-Explore Volunteer Opportunities");
                 setP3("-Easily Make Donations and Track Contributions");
                 setP4("-Stay Connected with the Latest Updates");
+                const img1 = document.getElementById('USERTake1');
+                const img2 = document.getElementById('NGOTake1');
+                img1.style.display = "none";
+                img2.style.display = "block";
             }
             setUserType2(1);
         }
@@ -72,6 +78,10 @@ function Login(){
                 setP2("-Launch and Track Fundraising Campaigns");
                 setP3("-Connect with Volunteers and Donors");
                 setP4("-Stay Informed with Real-Time Updates and Analytics");
+                const img1 = document.getElementById('USERTake1');
+                const img2 = document.getElementById('NGOTake1');
+                img1.style.display = "block";
+                img2.style.display = "none";
             }
             setUserType2(2);
         }
@@ -100,6 +110,9 @@ function Login(){
             <div>
                 <div>
                     <div className='leftContainer'>
+                        
+                        <img src={NGO} id="NGOTake1" alt="NGO Take 1"/>
+                        <img src={USER} id="USERTake1" alt="USER Take 1"/>
 
                         <div id="LoginSwitcher">
                             <button ref={btn1Ref} id="SwitchF" onClick={() => handleClick(1)}>User</button>
