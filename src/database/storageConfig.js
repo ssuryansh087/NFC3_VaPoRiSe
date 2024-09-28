@@ -3,7 +3,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCybZHieaHBkcrKIKy8KCGPz_zIVRg92qQ",
+    apiKey: "AI-------------------------------------qQ",
     authDomain: "humango-91767.firebaseapp.com",
     projectId: "humango-91767",
     storageBucket: "humango-91767.appspot.com",
